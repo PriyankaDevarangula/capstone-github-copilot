@@ -53,7 +53,7 @@ def route(method: str, path: str):
 
 @route("GET", "/books")
 def get_books():
-    """Return the list of books."""
+    """Return all books."""
     return {"books": []}
 
 
@@ -73,7 +73,7 @@ BOOK_API_CONTRACT = {
     "GET /books": RouteSpec(
         method="GET",
         path="/books",
-        summary="Return the list of books.",
+        summary="Return all books.",
         responses={
             "200": {
                 "description": "List of books returned successfully.",
